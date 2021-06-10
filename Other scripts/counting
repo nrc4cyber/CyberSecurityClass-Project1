@@ -1,0 +1,8 @@
+#!/bin/bash
+i=0
+while true; do
+  clear
+  echo $(bc <<< "obase=2;$i")
+  ((i++))
+  sleep 0.5s
+done

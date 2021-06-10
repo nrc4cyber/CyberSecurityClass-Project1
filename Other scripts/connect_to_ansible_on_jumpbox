@@ -1,0 +1,4 @@
+#!/bin/bash
+## ssh sysadmin@137.135.25.155 "sudo docker container list -a && sudo docker start provisioner && sudo docker attach provisioner"
+## ssh sysadmin@137.135.25.155 "sudo ./connect_to_provisioner"
+ssh sysadmin@137.135.25.155

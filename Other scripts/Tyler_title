@@ -1,0 +1,118 @@
+#!/bin/bash
+# sel=1
+sel=$1
+cn1=51
+cn2=3
+cn3=11
+cn4=7
+cn5=197
+sleep_time='0.1'
+itterations="$(seq 1 100)"
+
+
+# B="\033[30;48;5;51m"
+# c1="\033[30;48;5;3m"
+# c2="\033[30;48;5;11m"
+# c3="\033[30;48;5;7m"
+# c4="\033[30;48;5;197m"
+# RST="\033[0m"
+
+name() {
+    B="\033[30;48;5;${cn1}m"
+    c1="\033[30;48;5;${cn2}m"
+    c2="\033[30;48;5;${cn3}m"
+    c3="\033[30;48;5;${cn4}m"
+    c4="\033[30;48;5;${cn5}m"
+    RST="\033[0m"
+    echo -e "${B}TTTTTTTTTTTTTTTTTTTTTTT${RST}                      ${c2}lllllll${RST}                                          ";
+    echo -e "${B}T:::::::::::::::::::::T${RST}                      ${c2}l:::::l${RST}                                          ";
+    echo -e "${B}T:::::::::::::::::::::T${RST}                      ${c2}l:::::l${RST}                                          ";
+    echo -e "${B}T:::::TT:::::::TT:::::T${RST}                      ${c2}l:::::l${RST}                                          ";
+    echo -e "${B}TTTTTT${RST}  ${B}T:::::T${RST}  ${B}TTTTT${RST}${c1}yyyyyyy${RST}           ${c1}yyyyyy${RST}${c2}l::::l${RST}    ${c3}eeeeeeeeeeee${RST}   ${c4}rrrrr${RST}   ${c4}rrrrrrrrr${RST}      ";
+    echo -e "        ${B}T:::::T${RST}        ${c1}y:::::y${RST}         ${c1}y:::::y${RST}${c2}l::::l${RST}  ${c3}ee::::::::::::ee${RST} ${c4}r::::rrr:::::::::r${RST}     ";
+    echo -e "        ${B}T:::::T${RST}         ${c1}y:::::y${RST}       ${c1}y:::::y${RST} ${c2}l::::l${RST} ${c3}e::::::eeeee:::::e${RST}${c4}r:::::::::::::::::r${RST}    ";
+    echo -e "        ${B}T:::::T${RST}          ${c1}y:::::y${RST}     ${c1}y:::::y${RST}  ${c2}l::::l${RST}${c3}e::::::e${RST}     ${c3}e:::::${RST}${c4}rr::::::rrrrr::::::r${RST}   ";
+    echo -e "        ${B}T:::::T${RST}           ${c1}y:::::y${RST}   ${c1}y:::::y${RST}   ${c2}l::::l${RST}${c3}e:::::::eeeee::::::e${RST}${c4}r:::::r${RST}     ${c4}r:::::r${RST}   ";
+    echo -e "        ${B}T:::::T${RST}            ${c1}y:::::y${RST} ${c1}y:::::y${RST}    ${c2}l::::l${RST}${c3}e:::::::::::::::::e${RST} ${c4}r:::::r${RST}     ${c4}rrrrrrr${RST}   ";
+    echo -e "        ${B}T:::::T${RST}             ${c1}y:::::y:::::y${RST}     ${c2}l::::l${RST}${c3}e::::::eeeeeeeeeee${RST}  ${c4}r:::::r${RST}               ";
+    echo -e "        ${B}T:::::T${RST}              ${c1}y:::::::::y${RST}      ${c2}l::::l${RST}${c3}e:::::::e${RST}           ${c4}r:::::r${RST}               ";
+    echo -e "      ${B}TT:::::::TT${RST}             ${c1}y:::::::y${RST}      ${c2}l::::::${RST}${c3}e::::::::e${RST}          ${c4}r:::::r${RST}               ";
+    echo -e "      ${B}T:::::::::T${RST}              ${c1}y:::::y${RST}       ${c2}l::::::l${RST}${c3}e::::::::eeeeeeee${RST}  ${c4}r:::::r${RST}               ";
+    echo -e "      ${B}T:::::::::T${RST}             ${c1}y:::::y${RST}        ${c2}l::::::l${RST} ${c3}ee:::::::::::::e${RST}  ${c4}r:::::r${RST}               ";
+    echo -e "      ${B}TTTTTTTTTTT${RST}            ${c1}y:::::y${RST}         ${c2}llllllll${RST}   ${c3}eeeeeeeeeeeeee${RST}  ${c4}rrrrrrr${RST}               ";
+    echo -e "                            ${c1}y:::::y${RST}                                                           ";
+    echo -e "                           ${c1}y:::::y${RST}                                                            ";
+    echo -e "                          ${c1}y:::::y${RST}                                                             ";
+    echo -e "                         ${c1}y:::::y${RST}                                                              ";
+    echo -e "                        ${c1}yyyyyyy${RST}                                                               ";
+}
+name2() {
+    B="\033[30;48;5;${cn1}m"
+    c1="\033[30;48;5;${cn2}m"
+    c2="\033[30;48;5;${cn3}m"
+    c3="\033[30;48;5;${cn4}m"
+    c4="\033[30;48;5;${cn5}m"
+    RST="\033[0m"
+    echo -e "${B}                       ${RST}                      ${c2}       ${RST}                                          ";
+    echo -e "${B}                       ${RST}                      ${c2}       ${RST}                                          ";
+    echo -e "${B}                       ${RST}                      ${c2}       ${RST}                                          ";
+    echo -e "${B}                       ${RST}                      ${c2}       ${RST}                                          ";
+    echo -e "${B}      ${RST}  ${B}       ${RST}  ${B}     ${RST}${c1}       ${RST}           ${c1}      ${RST}${c2}      ${RST}    ${c3}            ${RST}   ${c4}     ${RST}   ${c4}         ${RST}      ";
+    echo -e "        ${B}       ${RST}        ${c1}       ${RST}         ${c1}       ${RST}${c2}      ${RST}  ${c3}                ${RST} ${c4}                  ${RST}     ";
+    echo -e "        ${B}       ${RST}         ${c1}       ${RST}       ${c1}       ${RST} ${c2}      ${RST} ${c3}                  ${RST}${c4}                   ${RST}    ";
+    echo -e "        ${B}       ${RST}          ${c1}       ${RST}     ${c1}       ${RST}  ${c2}      ${RST}${c3}        ${RST}     ${c3}      ${RST}${c4}                    ${RST}   ";
+    echo -e "        ${B}       ${RST}           ${c1}       ${RST}   ${c1}       ${RST}   ${c2}      ${RST}${c3}                    ${RST}${c4}       ${RST}     ${c4}       ${RST}   ";
+    echo -e "        ${B}       ${RST}            ${c1}       ${RST} ${c1}       ${RST}    ${c2}      ${RST}${c3}                   ${RST} ${c4}       ${RST}     ${c4}       ${RST}   ";
+    echo -e "        ${B}       ${RST}             ${c1}             ${RST}     ${c2}      ${RST}${c3}                  ${RST}  ${c4}       ${RST}               ";
+    echo -e "        ${B}       ${RST}              ${c1}           ${RST}      ${c2}      ${RST}${c3}         ${RST}           ${c4}       ${RST}               ";
+    echo -e "      ${B}           ${RST}             ${c1}         ${RST}      ${c2}       ${RST}${c3}          ${RST}          ${c4}       ${RST}               ";
+    echo -e "      ${B}           ${RST}              ${c1}       ${RST}       ${c2}        ${RST}${c3}                 ${RST}  ${c4}       ${RST}               ";
+    echo -e "      ${B}           ${RST}             ${c1}       ${RST}        ${c2}        ${RST} ${c3}                ${RST}  ${c4}       ${RST}               ";
+    echo -e "      ${B}           ${RST}            ${c1}       ${RST}         ${c2}        ${RST}   ${c3}              ${RST}  ${c4}       ${RST}               ";
+    echo -e "                            ${c1}       ${RST}                                                           ";
+    echo -e "                           ${c1}       ${RST}                                                            ";
+    echo -e "                          ${c1}       ${RST}                                                             ";
+    echo -e "                         ${c1}       ${RST}                                                              ";
+    echo -e "                        ${c1}       ${RST}                                                               ";
+}
+print_name1() {
+    clear
+    echo -e "\033[23B"
+    for x in $itterations;do 
+        echo -e "\033[22A"
+        name
+        sleep $sleep_time
+        ((cn1++))
+        ((cn2++))
+        ((cn3++))
+        ((cn4++))
+        ((cn5++))
+    done
+}
+print_name2() {
+    clear
+    echo -e "\033[23B"
+    for x in $itterations;do 
+        echo -e "\033[22A"
+        name2
+        sleep $sleep_time
+        ((cn1++))
+        ((cn2++))
+        ((cn3++))
+        ((cn4++))
+        ((cn5++))
+    done
+}
+if [ -z $sel ];then
+    sel=1
+fi
+case $sel in
+    
+    1)print_name1;;
+    2)print_name2;;
+    ?)print_name1;;
+
+esac
+
+
+# echo -e "\n\n$cn1\n$cn2\n$cn3\n$cn4\n$cn5"

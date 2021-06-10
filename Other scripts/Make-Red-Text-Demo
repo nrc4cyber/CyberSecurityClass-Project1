@@ -1,0 +1,5 @@
+#!/bin/bash
+RED='\033[0;31m'  # Red
+NC='\033[0m'      # No Color
+echo -e ${RED}Red${NC} Text
+tput setaf 1; echo "This text is also red"    # Another way to make red text

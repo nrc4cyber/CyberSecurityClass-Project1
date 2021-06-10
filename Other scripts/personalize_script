@@ -1,0 +1,6 @@
+#!/bin/bash
+newPATH="$HOME/.scripts"
+exp="export PATH=$PATH:$newPATH"
+rc="$HOME/.bashrc"
+echo "$exp" >> $rc
+apt install -y toilet figlet lolcat coysay htop

@@ -1,0 +1,38 @@
+#!/bin/bash
+time="$(date +%F_%R)"
+lgnm="_backup-script.log"
+fn="$time$lgnm"
+lgdr="$HOME/.backup-script-logs"
+lgs="$lgdr/$fn"
+# Check that the script is being run as root
+if [ $UID -ne 0 ]
+then
+   clear
+   echo "This script needs to be run as root"
+   exit
+fi
+
+# Checks for log file destination
+if [ ! -d $lgdr ]
+then
+    mkdir $lgdr
+fi
+
+
+# Checks the existance of /vagrant
+if [ -d "/vagrant" ];
+ then
+    touch $lgs
+    tar -cvvzf /vagrant/Important-things-backup.gz /home/sysadmin/{.bashrc,.bash_aliases,.scripts,script-backups} /etc/sudoers.d/ /etc/cron.hourly/backup-script-cron > $lgs
+else
+    errmsg="Error! /vagrant is missing (Thats really bad idk how you even got here)"
+    err="$(tput setaf 1; echo $errmsg)"
+    clear
+    echo $err
+    echo $err
+    echo $err
+    echo $err
+    echo $err
+exit
+
+fi

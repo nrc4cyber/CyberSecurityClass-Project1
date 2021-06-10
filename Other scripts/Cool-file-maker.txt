@@ -1,0 +1,1 @@
+touch file$(ls file*|wc -l).ext

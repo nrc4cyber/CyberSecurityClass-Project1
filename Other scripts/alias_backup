@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Checks if script is running with root
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root"
+    exit 1
+fi
+
+# Checks if the directory exists
+if [[ ! -d "/media/sf_Class_VM_Transfer/Alias_backups/" ]]; then
+    echo -e "Error directory does not exist.\nNow creating directory";
+    mkdir /media/sf_Class_VM_Transfer/Alias_backups && echo "Directory created,rechecking";
+fi
+
+# If the directory exists then zip the files
+if [[ -d "/media/sf_Class_VM_Transfer/Alias_backups" ]]; then
+    zip -u /media/sf_Class_VM_Transfer/Alias_backups/aliases_backup.zip /home/sysadmin/{.bash_aliases,alias_backup,nopass_sudo} /etc/cron.hourly/alias_backup_cron;
+    echo "Files Zipped successfully.";
+else
+    echo "Error, Unable to create required directories for an unknown reason.";
+    exit 1
+fi
+
+echo 'Your files should be backed up to your shared folder now. Have a great day :)'
+exit 0

@@ -1,0 +1,6 @@
+#!/bin/bash
+read -p "Enter Rotation number> " r
+a=abcdefghijklmnopqrstuvwxyz
+b=ABCDEFGHIJKLMNOPQRSTUVWXYZ
+#r=1
+echo $@ | sed "y/$a$b/${a:$r}${a::$r}${b:$r}${b::$r}/"

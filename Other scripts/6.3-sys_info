@@ -1,0 +1,15 @@
+#!/bin/bash
+dest="$HOME/research"
+if [ ! -d $dest ]
+then
+    clear
+    toilet -s --gay "ERROR"
+    cowsay "dir not found!"| lolcat
+    cowsay "Making dir now"|lolcat
+    mkdir $dest && cowsay "Dir made :)"|lolcat
+fi
+
+if [ -f $dest/sys_info.txt ]
+then
+    rm $dest/sys_info.txt && echo "file removed"
+fi

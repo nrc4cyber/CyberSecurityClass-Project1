@@ -1,0 +1,15 @@
+#!/bin/bash
+# Uncomment to use a different cool distro
+# dstro="--ascii_distro sabotage"
+ dstro="--ascii_distro scientific"
+# dstro="--ascii_distro salentos"
+# dstro="--ascii_distro redhat"
+# dstro="--ascii_distro slitaz"
+# dstro="--ascii_distro sparky"
+# dstro="--ascii_distro opensuse_tumbleweed"
+# dstro="--ascii_distro void"
+# dstro="--ascii_distro windows"
+# dstro="--ascii_distro zorin"
+# dstro="--ascii_distro pacbsd"
+
+neofetch --ip_host ifconfig.me/ip --memory_display infobar $dstro

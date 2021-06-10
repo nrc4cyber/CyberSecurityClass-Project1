@@ -1,0 +1,6 @@
+#!/bin/bash 
+
+#cd /c/Users/NRC/Documents/Cybersecurity-Bootcamp/Linux-Module/
+#vagrant ssh -c "sudo su sysadmin"
+
+ssh -p 2222 sysadmin@localhost

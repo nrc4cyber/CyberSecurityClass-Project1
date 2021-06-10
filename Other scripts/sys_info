@@ -1,0 +1,5 @@
+#!/bin/bash
+echo  $(date)
+echo $(uname -snrmpio)
+echo $(hostname -I| awk '{print $2}')
+echo $(hostname)
